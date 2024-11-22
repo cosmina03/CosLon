@@ -1,19 +1,25 @@
-export function mapProductToCard(product){
+export function mapProductToCard(product) {
     return `
-            <div class="card flex-col items-center gap-20">
-                <div class="img">
-                    <img src="${product.ImageURL}" alt="">
-                </div>
-                <div class="info">
-                    <div class="name">
-                        <h3>${product.Name}</h3>
-                        <h4>${product.Details}</h4>
-                    </div>
-                    <div class="price">${product.Price} lei</div>
-                    <button class="add-to-cart">Adauga in cos</button>
-                </div>
+        <div class="card flex-col items-center gap-20">
+            <div class="img">
+                <img src="${product.ImageURL}" alt="${product.Name}">
             </div>
-        `;
+            <div class="info">
+                <div class="name">
+                    <h3>${product.Name}</h3>
+                    <h4>${product.Details}</h4>
+                </div>
+                <div class="price">${product.Price} lei</div>
+                <button class="add-to-cart" 
+                    data-productId="${product.id}" 
+                    data-name="${product.Name}" 
+                    data-price="${product.Price}" 
+                    data-image="${product.ImageURL}">
+                    Adaugă în coș
+                </button>
+            </div>
+        </div>
+    `;
 }
 
 export function mapProductToAdminTableRow(product){
