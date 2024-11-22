@@ -12,7 +12,7 @@ async function showProductDetils(){
 
     document.querySelector(".content").innerHTML = 
     `
-    <h2>${product.details}</h2>
+    <h2>${product.Details}</h2>
     
     `;
 }

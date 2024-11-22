@@ -2,7 +2,9 @@ export function mapProductToCard(product) {
     return `
         <div class="card flex-col items-center gap-20">
             <div class="img">
+            <a href="../pages/details.html?id=${product.id}" />
                 <img src="${product.ImageURL}" alt="${product.Name}">
+            </a> 
             </div>
             <div class="info">
                 <div class="name">
