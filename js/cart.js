@@ -4,7 +4,8 @@ const cartTotalContainer = document.querySelector('.cart-total');
 let cart = JSON.parse(localStorage.getItem('cart'));;
 
 function showCart() {
-	
+	cart = JSON.parse(localStorage.getItem('cart'));
+
 	let total = 0;
 
 	cartItemsContainer.innerHTML = '';
